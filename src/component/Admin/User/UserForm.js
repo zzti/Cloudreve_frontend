@@ -141,7 +141,8 @@ export default function UserForm(props) {
                                 </InputLabel>
                                 <Input
                                     value={user.Email}
-                                    type={"email"}
+                                    //type={"email"}
+                                    type={"text"}
                                     onChange={handleChange("Email")}
                                     required
                                 />

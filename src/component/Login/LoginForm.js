@@ -289,7 +289,8 @@ function LoginForm() {
                                         variant={"outlined"}
                                         inputProps={{
                                             id: "email",
-                                            type: "email",
+                                            //type: "email",
+                                            type: "text", 
                                             name: "email",
                                         }}
                                         onChange={(e) =>
