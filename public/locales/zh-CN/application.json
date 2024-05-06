@@ -1,6 +1,6 @@
 {
   "login": {
-    "email": "电子邮箱",
+    "email": "电子邮箱|手机号码",
     "password": "密码",
     "captcha": "验证码",
     "captchaError": "验证码加载失败: {{message}}",

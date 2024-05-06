@@ -1,6 +1,6 @@
 {
   "login": {
-    "email": "電子信箱",
+    "email": "電子信箱|移動電話",
     "password": "密碼",
     "captcha": "驗證碼",
     "captchaError": "驗證碼載入失敗: {{message}}",
