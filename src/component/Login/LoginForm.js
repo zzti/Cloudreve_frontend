@@ -387,9 +387,11 @@ function LoginForm() {
                         <Divider />
                         <div className={classes.link}>
                             <div>
+                                {registerEnabled && (
                                 <Link component={RouterLink} to={"/forget"}>
                                     {t("login.forgetPassword")}
                                 </Link>
+                                )}
                             </div>
                             <div>
                                 {registerEnabled && (
