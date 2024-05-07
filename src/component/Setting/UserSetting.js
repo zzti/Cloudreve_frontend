@@ -664,9 +664,9 @@ class UserSettingCompoment extends Component {
                             <Divider />
                             <ListItem
                                 button
-                                onClick={() =>
-                                    this.setState({ nickModal: true })
-                                }
+                                // onClick={() =>
+                                //     this.setState({ nickModal: true })
+                                // }
                             >
                                 <ListItemIcon className={classes.iconFix}>
                                     <NickIcon />
@@ -674,9 +674,9 @@ class UserSettingCompoment extends Component {
                                 <ListItemText primary={t("setting.nickname")} />
 
                                 <ListItemSecondaryAction
-                                    onClick={() =>
-                                        this.setState({ nickModal: true })
-                                    }
+                                    // onClick={() =>
+                                    //     this.setState({ nickModal: true })
+                                    // }
                                     className={classes.flexContainer}
                                 >
                                     <Typography
