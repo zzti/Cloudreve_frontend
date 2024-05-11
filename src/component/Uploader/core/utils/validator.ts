@@ -13,7 +13,9 @@ const checkers: Array<Validator> = [
             policy.allowedSuffix.length > 0
         ) {
             const ext = file?.name.split(".").pop();
-            if (ext === null || !ext || !policy.allowedSuffix.includes(ext))
+            //if (ext === null || !ext || !policy.allowedSuffix.includes(ext))
+            // 判断文件后缀扩展名是否在白名单中, 如果不在白名单中则抛出错误,不区分大小写
+            if (ext === null || !ext || !policy.allowedSuffix.some((s) => s.toLowerCase() === ext.toLowerCase()))
                 throw new FileValidateError(
                     "File suffix not allowed in policy.",
                     "suffix",
