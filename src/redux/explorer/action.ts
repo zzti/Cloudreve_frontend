@@ -360,6 +360,8 @@ export const startBatchDownload = (
                 "info"
             )
         );
+        const rootlocation = window.location.origin;
+        streamSaver.mitm = rootlocation + "/mitm.html?version=2.0.0";
         const fileStream = streamSaver.createWriteStream("archive.zip");
         let failed = 0;
         const readableZipStream = new (window as any).ZIP({
