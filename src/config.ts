@@ -163,6 +163,17 @@ export const getTaskProgress = (type: any, status: any) => {
     return i18next.t(taskProgress[status]);
 };
 
+// msDocPreviewSuffix重新赋值为wopi支持的文件后缀
+// exts为后端传过来的wopi支持的文件后缀
 export const setWopiExts = (exts: string[]) => {
-    msDocPreviewSuffix = exts;
+    // 完全重新赋值
+    //msDocPreviewSuffix = exts;
+
+    // 仅添加期望wopi支持的文件后缀 --开始
+    const expectExts: string[] = [];
+    if (exts.indexOf("epub") !== -1) {
+        expectExts.push("epub");
+    }
+    msDocPreviewSuffix = msDocPreviewSuffix.concat(expectExts);
+    // 仅添加期望wopi支持的文件后缀 --结束
 };
