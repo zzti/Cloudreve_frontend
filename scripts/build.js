@@ -46,6 +46,9 @@ if (!checkRequiredFiles([paths.appHtml, paths.appIndexJs])) {
 // Generate configuration
 const config = configFactory('production');
 
+// build不生成.map文件(仅对js有效,css依然还生成.map文件)
+config.devtool = false;
+
 // We require that you explicitly set browsers and do not fall back to
 // browserslist defaults.
 const { checkBrowsers } = require('react-dev-utils/browsersHelper');
